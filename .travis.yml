@@ -9,10 +9,10 @@ jobs:
 
         # - stage: "tagging images"
         #   script:
-        - docker tag udagram-api-feed lenno93/udagram-api-feed
-        - docker tag udagram-api-user lenno93/udagram-api-user
-        - docker tag udagram-frontend lenno93/udagram-frontend
-        - docker tag reverseproxy lenno93/reverseproxy
+        - docker tag udagram-api-feed lenno93/udagram-api-feed:v1
+        - docker tag udagram-api-user lenno93/udagram-api-user:v1
+        - docker tag udagram-frontend lenno93/udagram-frontend:v1
+        - docker tag reverseproxy lenno93/reverseproxy:v1
 
         # - stage: "login to docker hub"
         #   script:
