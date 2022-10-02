@@ -7,19 +7,19 @@ jobs:
         - docker build -t udagram-frontend ./udagram-frontend
         - docker build -t reverseproxy ./udagram-reverseproxy
 
-    - stage: "tagging images"
-      script:
+        # - stage: "tagging images"
+        #   script:
         - docker tag udagram-api-feed lenno93/udagram-api-feed
         - docker tag udagram-api-user lenno93/udagram-api-user
         - docker tag udagram-frontend lenno93/udagram-frontend
         - docker tag reverseproxy lenno93/reverseproxy
 
-    - stage: "login to docker hub"
-      script:
+        # - stage: "login to docker hub"
+        #   script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password---password-stdin
 
-    - stage: "Push images to docker hub"
-      script:
+        # - stage: "Push images to docker hub"
+        #   script:
         - docker push lenno93/udagram-api-feed:v1
         - docker push lenno93/udagram-api-user:v1
         - docker push lenno93/udagram-frontend:v1
