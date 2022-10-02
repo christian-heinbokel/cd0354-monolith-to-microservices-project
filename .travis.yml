@@ -16,7 +16,7 @@ jobs:
 
         # - stage: "login to docker hub"
         #   script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password---password-stdin
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
         # - stage: "Push images to docker hub"
         #   script:
